@@ -24,10 +24,12 @@ def print_query(view_name:str):
 
 menu_choice =''
 while menu_choice != 'Z':
-    menu_choice = input('Welcome to the Tottenham Hotspurs players database for the 23/24 season\n\n'
-                        'Please type the letter for the information you want\n'
+    menu_choice = input('Welcome to the Tottenham Hotspurs players database from the 23/24 season\n\n'
+                        'Please type the letter for the information that you want\n'
+                        'To exit please type "Z"\n\n'
+                        
     
-                        'Z: Exit\n\n Type option here: ')
+                        'Z: Exit\n\n''Type option here: ')
 
     menu_choice = menu_choice.upper()
 

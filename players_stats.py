@@ -27,12 +27,19 @@ while menu_choice != 'Z':
     menu_choice = input('Welcome to the Tottenham Hotspurs players database from the 23/24 season\n\n'
                         'Please type the letter for the information that you want\n'
                         'To exit please type "Z"\n\n'
-                        
+                        'A: All stats for the players\n'
+                        'B: Top 8 goalscorers\n'
+                        'C: Players with the most minutes played\n'
     
                         'Z: Exit\n\n''Type option here: ')
 
     menu_choice = menu_choice.upper()
-
+    if menu_choice =='A':
+        print_query('All information')
+    if menu_choice =='B':
+        print_query('Top 8 goalscorers')
+    if menu_choice =='C':
+        print_query('Most minutes plated')
 
 
 

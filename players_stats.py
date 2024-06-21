@@ -39,7 +39,7 @@ while menu_choice != 'Z':
     if menu_choice =='B':
         print_query('Top 8 goalscorers')
     if menu_choice =='C':
-        print_query('Most minutes plated')
+        print_query('Most minutes played')
 
 
 

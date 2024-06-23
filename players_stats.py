@@ -25,6 +25,11 @@ def print_query(view_name:str):
 menu_choice =''
 while menu_choice != 'Z':
     menu_choice = input('Welcome to the Tottenham Hotspurs players database from the 23/24 season\n\n'
+                        'PLEASE NOTE: This database ONLY INCLUDES the following players\n'
+                        ' - Players who are currently still in the club\n'
+                        ' - Players who have played during this season\n'
+                        ' - Players who did not go on loan for most/entire season\n'
+                        ' - Loan players coming in do count\n\n'
                         'Please type the letter for the information that you want\n'
                         'To exit please type "Z"\n\n'
                         'A: All stats for the players\n'

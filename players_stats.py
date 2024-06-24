@@ -35,16 +35,23 @@ while menu_choice != 'Z':
                         'A: All stats for the players\n'
                         'B: Top 8 goalscorers\n'
                         'C: Players with the most minutes played\n'
+                        'D: Players with at least 1 goal and assist\n'
+                        'E: Centre-Forward players\n'
     
                         'Z: Exit\n\n''Type option here: ')
 
     menu_choice = menu_choice.upper()
     if menu_choice =='A':
         print_query('All information')
-    if menu_choice =='B':
+    elif menu_choice =='B':
         print_query('Top 8 goalscorers')
-    if menu_choice =='C':
+    elif menu_choice =='C':
         print_query('Most minutes played')
+    elif menu_choice =='D':
+        print_query('At least 1 goal and 1 assist')
+    elif menu_choice =='E':
+        print_query('Centre Forwards stats')
+
 
 
 

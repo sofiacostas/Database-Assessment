@@ -32,11 +32,17 @@ while menu_choice != 'Z':
                         ' - Loan players coming in do count\n\n'
                         'Please type the letter for the information that you want\n'
                         'To exit please type "Z"\n\n'
-                        'A: All stats for the players\n'
+                        'A: All stats\n'
                         'B: Top 8 goalscorers\n'
-                        'C: Players with the most minutes played\n'
-                        'D: Players with at least 1 goal and assist\n'
-                        'E: Centre-Forward players\n'
+                        'C: Most minutes played\n'
+                        'D: Have had at least 1 goal and assist\n'
+                        'E: Centre-Forwards\n'
+                        'F: Non England players\n'
+                        'G: Games played and amount of yellow cards\n'
+                        'H: Less than 2000 minutes played\n'
+                        'I: Under 25 years old\n'
+                        'J: Top 5 assisters\n'
+
     
                         'Z: Exit\n\n''Type option here: ')
 
@@ -51,6 +57,17 @@ while menu_choice != 'Z':
         print_query('At least 1 goal and 1 assist')
     elif menu_choice =='E':
         print_query('Centre Forwards stats')
+    elif menu_choice =='F':
+        print_query('Non England players')
+    elif menu_choice =='G':
+        print_query('Games played and amount of yellow cards')
+    elif menu_choice =='H':
+        print_query('Under 2000 minutes played')
+    elif menu_choice =='I':
+        print_query('Age under 25')
+    elif menu_choice =='J':
+        print_query('Top 5 players most assists')
+
 
 
 

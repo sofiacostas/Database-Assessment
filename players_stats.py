@@ -36,10 +36,11 @@ def print_query(view_name:str):
     print(tabulate(results,headings))
     db.close()
 
-nation = input('What nation do you want to see players of: ')
-print_parameter_query("name, age", "nation = ? ORDER BY age DESC",nation)
+nation = input('Of what nation do you want to see players of: ')
+print_parameter_query("name, age, games_played", "nation = ? ORDER BY age DESC",nation)
 
-
+position = input('Of what position do you want to see players of: ')
+print_parameter_query("name, age, games_played", "position = ? ORDER BY age DESC",position)
 
 menu_choice =''
 while menu_choice != 'Z':

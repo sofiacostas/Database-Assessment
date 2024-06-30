@@ -4,6 +4,20 @@ from tabulate import tabulate
 
 # This is the filename of the database to be used
 DB_NAME = 'players_stats.db'
+# This is the SQL to connect to all the tables in the database
+TABLES = (" players_stats "
+          "LEFT JOIN nations ON players_stats.nation_id = nations.nation_id "
+          "LEFT JOIN positions ON players_stats.position_id = positions.position_id ")
+
+def print_parameter_query(fields:str, where:str, parameter):
+    """ Prints the results for a parameter query in tabular form. """
+    db = sqlite3.connect(DB_NAME)
+    cursor = db.cursor()
+    sql = ("SELECT " + fields + " FROM " + TABLES + " WHERE " + where)
+    cursor.execute(sql,(parameter,))
+    results = cursor.fetchall()
+    print(tabulate(results,fields.split(",")))
+    db.close()
 
 def print_query(view_name:str):
     ''' Prints the specified view from the database in a table '''

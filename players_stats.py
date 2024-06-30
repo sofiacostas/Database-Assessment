@@ -36,6 +36,11 @@ def print_query(view_name:str):
     print(tabulate(results,headings))
     db.close()
 
+nation = input('What nation do you want to see players of: ')
+print_parameter_query("name, age", "nation = ? ORDER BY age DESC",nation)
+
+
+
 menu_choice =''
 while menu_choice != 'Z':
     menu_choice = input('Welcome to the Tottenham Hotspurs players database from the 23/24 season\n\n'
@@ -81,8 +86,6 @@ while menu_choice != 'Z':
         print_query('Age under 25')
     elif menu_choice =='J':
         print_query('Top 5 players most assists')
-
-
 
 
 

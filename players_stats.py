@@ -36,11 +36,6 @@ def print_query(view_name:str):
     print(tabulate(results,headings))
     db.close()
 
-nation = input('Of what nation do you want to see players of: ')
-print_parameter_query("name, age, games_played", "nation = ? ORDER BY age DESC",nation)
-
-position = input('Of what position do you want to see players of: ')
-print_parameter_query("name, age, games_played", "position = ? ORDER BY age DESC",position)
 
 menu_choice =''
 while menu_choice != 'Z':
@@ -56,14 +51,15 @@ while menu_choice != 'Z':
                         'B: Top 8 goalscorers\n'
                         'C: Most minutes played\n'
                         'D: Have had at least 1 goal and assist\n'
-                        'E: Centre-Forwards\n'
-                        'F: Non England players\n'
+                        'E: What position players are\n'
+                        'F: What nation players are\n'
                         'G: Games played and amount of yellow cards\n'
                         'H: Less than 2000 minutes played\n'
                         'I: Under 25 years old\n'
                         'J: Top 5 assisters\n'
+                        'K: At least 25 games and 2500 mins played\n'
+                        'L: Top 5 most games played by players 27years or older\n'
 
-    
                         'Z: Exit\n\n''Type option here: ')
 
     menu_choice = menu_choice.upper()
@@ -76,9 +72,11 @@ while menu_choice != 'Z':
     elif menu_choice =='D':
         print_query('At least 1 goal and 1 assist')
     elif menu_choice =='E':
-        print_query('Centre Forwards stats')
+        position = input('Of what position do you want to see players of: ')
+        print_parameter_query("name, age, games_played", "position = ? ORDER BY age DESC",position)
     elif menu_choice =='F':
-        print_query('Non England players')
+        nation = input('Of what nation do you want to see players of: ')
+        print_parameter_query("name, age, games_played", "nation = ? ORDER BY age DESC",nation)
     elif menu_choice =='G':
         print_query('Games played and amount of yellow cards')
     elif menu_choice =='H':
@@ -87,6 +85,10 @@ while menu_choice != 'Z':
         print_query('Age under 25')
     elif menu_choice =='J':
         print_query('Top 5 players most assists')
+    elif menu_choice =='K':
+        print_query('At least 25 games and 2500 mins played')
+    elif menu_choice =='L':
+        print_query('Top 5 players 27 or older most games played')
 
 
 

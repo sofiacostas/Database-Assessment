@@ -72,9 +72,39 @@ while menu_choice != 'Z':
     elif menu_choice =='D':
         print_query('At least 1 goal and 1 assist')
     elif menu_choice =='E':
+        print('Here are the following positions to choose from\n'
+              '- Goalkeeper\n'
+              '- Centre-Back\n'
+              '- Right-Back\n'
+              '- Left-Back\n'
+              '- Attacking Midfield\n'
+              '- Central Midfield\n'
+              '- Defensive Midfield\n'
+              '- Right Winger\n'
+              '- Left Winger\n'
+              '- Centre-Forward\n'
+              '- Second Striker\n')
         position = input('Of what position do you want to see players of: ')
         print_parameter_query("name, age, games_played", "position = ? ORDER BY age DESC",position)
     elif menu_choice =='F':
+        print('Here are the following nations to choose from\n'
+              '- Italy\n'
+              '- England\n'
+              '- Argentina\n'
+              '- Netherlands\n'
+              '- Spain\n'
+              '- Romania\n'
+              '- Brazil\n'
+              '- Colombia\n'
+              '- Wales\n'
+              '- Senegal\n'
+              '- Mali\n'
+              '- Uruguay\n'
+              '- Denmark\n'
+              '- Sweden\n'
+              '- South Korea\n'
+              '- Germany\n'
+              '- Israel\n')
         nation = input('Of what nation do you want to see players of: ')
         print_parameter_query("name, age, games_played", "nation = ? ORDER BY age DESC",nation)
     elif menu_choice =='G':
